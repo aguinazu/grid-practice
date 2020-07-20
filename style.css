@@ -1,0 +1,80 @@
+
+/* Global */
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1.5fr;
+    grid-template-rows: 1fr 4fr 3fr 2fr;
+    height: 100vh;
+        
+    /* Es posible usar grid-template-areas y definir el layout que queremos como 
+    aparece abajo. Luego en cada contener correspondiente le asignamos el nombre
+    que corresponda.
+
+    grid-template-areas: 
+        "main       main        header"
+        "main       main        candy"
+        "nom        yum         candy"
+        "diabetes   diabetes    candy" */
+}
+
+/* Main */
+
+main {
+    /* También podemos usar grid-area: 1 / 1 / 3 /3 (row-start / column-start / row-end / column-end)*/
+    grid-column: 1/3;
+    grid-row: 1/3;
+    background-color: #FFFADF;
+    border: solid black 1px;
+    /* grid-area: main; */
+}
+
+/* nom */
+
+.nom {
+    grid-area: 3 / 1 / 4 / 2 ;
+    background-color: aquamarine;
+    border: solid black 1px;
+    /* grid-area: nom; */
+}
+
+/* yam */
+
+.yam {
+    grid-area: 3 / 2 / 4 / 3;
+    background-color: brown;
+    border: solid black 1px;
+    /* grid-area: yam; */
+}
+
+/* diabetes */
+
+.diabetes {
+    grid-area: 4 / 1 / 5 / 3;
+    background-color: black;  
+    border: solid black 1px;
+      /* grid-area: diabetes;  */
+}
+
+/* Header */
+
+header {
+    grid-area: 1 / 3 / 2 / 4;
+    background-color: blue;
+    border: solid black 1px;
+    /* grid-area: header; */
+}
+
+/* candy */
+
+.candy {
+    grid-area: 2 / 3 / 5 / 4;
+    background-color: crimson;
+    border: solid black 1px;
+    /* grid-area: candy; */
+}
